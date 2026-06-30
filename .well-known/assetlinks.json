@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "us.zoom.cars",
+      "sha256_cert_fingerprints": [
+        "CD:7C:3C:98:47:7C:BC:71:0C:63:3E:3D:76:86:2F:F7:FF:FA:FE:4B:41:57:3F:63:DF:58:55:31:73:02:B6:C5"
+      ]
+    }
+  }
+]

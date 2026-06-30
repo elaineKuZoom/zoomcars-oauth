@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ZoomForCars OAuth Callback</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; padding: 2rem; max-width: 640px; margin: auto; color: #222; }
+    pre { background: #f4f4f4; padding: 1rem; border-radius: 6px; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <h1>OAuth callback</h1>
+  <p>If the ZoomForCars app is installed and App Links are verified, Android should route this URL into the app and you should not see this page.</p>
+  <p>If you see this page on a device with the app installed, App Links verification likely failed. Run <code>adb shell pm get-app-links us.zoom.cars</code> to check.</p>
+  <pre id="params"></pre>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const out = {};
+    for (const [k, v] of params) out[k] = v;
+    document.getElementById('params').textContent =
+      Object.keys(out).length ? JSON.stringify(out, null, 2) : '(no query parameters)
+  </script>
+</body>
+</html>
